@@ -1,24 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Publications - Spintronics Group</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Spintronics Group | Exploring 2D Magnetism</title>
+  <link rel="shortcut icon" href="favicon.png">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap4.min.css">
   <style>
-    body { font-family: sans-serif; margin: 40px; background: #f9f9f9; }
-    .navbar { display: flex; justify-content: flex-end; border-bottom: 3px solid #a51c30; padding: 20px; background: white; }
-    .navbar a { margin-left: 20px; text-decoration: none; color: #a51c30; font-weight: bold; }
-    section { max-width: 800px; margin: 40px auto; background: white; padding: 30px; border-radius: 8px; box-shadow: 0 0 8px rgba(0,0,0,0.1); }
+    body {
+      margin: 0;
+      font-family: "Hind", sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #fff;
+      padding: 20px 40px;
+      border-bottom: 3px solid #a51c30;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .navbar a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #a51c30;
+      font-weight: bold;
+    }
+    .navbar a:hover {
+      text-decoration: underline;
+    }
+    .header {
+      background-image: url("header-image.jpg");
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 100px 20px 40px;
+      text-align: center;
+    }
+    .header h1 {
+      font-size: 3em;
+      margin: 0 0 10px;
+    }
+    .header p {
+      font-size: 1.3em;
+    }
+    .section {
+      max-width: 1100px;
+      margin: 40px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    }
+    .section h2 {
+      border-left: 4px solid #a51c30;
+      padding-left: 12px;
+    }
+    .news ul {
+      padding-left: 20px;
+    }
+    .members-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .member-card {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+      text-align: center;
+      padding: 20px;
+      width: 220px;
+    }
+    .member-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+    .member-card h4 {
+      margin: 12px 0 6px;
+    }
+    .member-card p {
+      font-size: 0.9em;
+      color: #666;
+    }
+    footer {
+      background-color: #fff;
+      text-align: center;
+      margin-top: 40px;
+      padding: 30px;
+      font-size: 0.9em;
+      border-top: 1px solid #ccc;
+      color: #555;
+    }
   </style>
 </head>
 <body>
-
   <nav class="navbar">
-    <a href="index.html">Home</a>
-    <a href="research.html">Research</a>
-    <a href="members.html">Members</a>
-    <a href="publications.html">Publications</a>
-    <a href="contact.html">Contact</a>
+    <div class="logo"><strong>Spintronics Group</strong></div>
+    <div>
+      <a href="index.html">Home</a>
+      <a href="research.html">Research</a>
+      <a href="members.html">Members</a>
+      <a href="publications.html">Publications</a>
+      <a href="contact.html">Contact</a>
+    </div>
   </nav>
+
+  <div class="header">
+    <h1>Spintronics Group</h1>
+    <p>Exploring 2D magnetism and spin transport</p>
+  </div>
 
   <section>
     <h1>Selected Publications</h1>
