@@ -1,38 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Members - Spintronics Group</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Spintronics Group | Exploring 2D Magnetism</title>
+  <link rel="shortcut icon" href="favicon.png">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap4.min.css">
   <style>
-    body { font-family: sans-serif; margin: 40px; background: #f9f9f9; }
-    .navbar { display: flex; justify-content: flex-end; border-bottom: 3px solid #a51c30; padding: 20px; background: white; }
-    .navbar a { margin-left: 20px; text-decoration: none; color: #a51c30; font-weight: bold; }
-    section { max-width: 800px; margin: 40px auto; background: white; padding: 30px; border-radius: 8px; box-shadow: 0 0 8px rgba(0,0,0,0.1); }
+    body {
+      margin: 0;
+      font-family: "Hind", sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #fff;
+      padding: 20px 40px;
+      border-bottom: 3px solid #a51c30;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .navbar a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #a51c30;
+      font-weight: bold;
+    }
+    .navbar a:hover {
+      text-decoration: underline;
+    }
+    .header {
+      background-image: url("header-image.jpg");
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 100px 20px 40px;
+      text-align: center;
+    }
+    .header h1 {
+      font-size: 3em;
+      margin: 0 0 10px;
+    }
+    .header p {
+      font-size: 1.3em;
+    }
+    .section {
+      max-width: 1100px;
+      margin: 40px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    }
+    .section h2 {
+      border-left: 4px solid #a51c30;
+      padding-left: 12px;
+    }
+    .news ul {
+      padding-left: 20px;
+    }
+    .members-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .member-card {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+      text-align: center;
+      padding: 20px;
+      width: 220px;
+    }
+    .member-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+    .member-card h4 {
+      margin: 12px 0 6px;
+    }
+    .member-card p {
+      font-size: 0.9em;
+      color: #666;
+    }
+    footer {
+      background-color: #fff;
+      text-align: center;
+      margin-top: 40px;
+      padding: 30px;
+      font-size: 0.9em;
+      border-top: 1px solid #ccc;
+      color: #555;
+    }
   </style>
 </head>
 <body>
-
   <nav class="navbar">
-    <a href="index.html">Home</a>
-    <a href="research.html">Research</a>
-    <a href="members.html">Members</a>
-    <a href="publications.html">Publications</a>
-    <a href="contact.html">Contact</a>
+    <div class="logo"><strong>Spintronics Group</strong></div>
+    <div>
+      <a href="index.html">Home</a>
+      <a href="research.html">Research</a>
+      <a href="members.html">Members</a>
+      <a href="publications.html">Publications</a>
+      <a href="contact.html">Contact</a>
+    </div>
   </nav>
 
-  <section>
-    <h1>Lab Members</h1>
+  <div class="header">
+    <h1>Spintronics Group</h1>
+    <p>Exploring 2D magnetism and spin transport</p>
+  </div>
+
+  <section class="section">
+    <h2>Welcome</h2>
+    <p>
+      We are an experimental condensed matter physics group focusing on low-dimensional magnetic materials and spintronic phenomena. Our interests include magnetic van der Waals materials, spin transport, and electric control of magnetism.
+    </p>
+    <p>
+      We welcome collaborations and applications from motivated undergraduate, graduate, and postdoctoral researchers. <a href="contact.html">Get in touch</a>!
+    </p>
+  </section>
+
+  <section class="section news">
+    <h2>News</h2>
     <ul>
-      <li><strong>최준우 Dr. Jun Woo Choi – Principal Investigator</strong></li>
-      <li> 권희영 Dr. Hee Young Kwon– Postdoctoral Researcher</li>
-      <li> 이호원 Dr. Howon Lee– Postdoctoral Researcher</li>
-      <li> 김민재 Dr. Min-Jae Kim – BRAINPOOL </li>
-      <li> 김정현 Dr. Junghyun Kim – Postdoctoral Researcher</li>
-      <li> 장명진 Dr. Myeongjin Jang – Postdoctoral Researcher</li>
-      <li> 박찬혁 PARK CHAN HYUK – PhD Student</li>
-      <li> 장준표 Junpyo Jang – Intern</li>
+      <li>Our paper on ionic gating of vdW magnets is now on <a href="#">arXiv</a> (2025/07)</li>
+      <li>Congratulations to Jihye on receiving the NRF Fellowship! (2025/05)</li>
+      <li>Welcome to Seojin and Daniel who joined the group! (2025/03)</li>
     </ul>
   </section>
 
+  <section class="section">
+    <h2>Members</h2>
+    <div class="members-grid">
+      <div class="member-card">
+        <img src="member1.jpg" alt="Junwoo Kim">
+        <h4>Junwoo Kim</h4>
+        <p>Principal Investigator – Spintronics, 2D magnetism</p>
+      </div>
+      <div class="member-card">
+        <img src="member2.jpg" alt="Minji Park">
+        <h4>Minji Park</h4>
+        <p>Ph.D. student – van der Waals heterostructures</p>
+      </div>
+      <div class="member-card">
+        <img src="member3.jpg" alt="Daniel Lee">
+        <h4>Daniel Lee</h4>
+        <p>M.S. student – Spin transport measurement</p>
+      </div>
+      <!-- 추가 멤버 카드 자유롭게 삽입 가능 -->
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Spintronics Group – junwoo@kist.re.kr<br>
+    Hosted at KIST, Seoul, Republic of Korea
+  </footer>
 </body>
 </html>
