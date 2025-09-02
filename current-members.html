@@ -63,13 +63,37 @@
     .news ul {
       padding-left: 20px;
     }
-    .member-card {
-      display: flex;  /* ✅ 핵심: 사진+설명을 가로로 정렬 */
-      align-items: center;
-      gap: 20px;
-      margin-bottom: 20px;
-    }
+.members-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
 
+.member-card {
+  display: flex;
+  flex-direction: row;   /* 좌우 배치 */
+  align-items: flex-start;
+  gap: 20px;
+  max-width: 900px;
+}
+
+.member-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.member-left img {
+  width: 150px;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.member-info {
+  flex: 1; /* 오른쪽 영역이 남은 공간 채우도록 */
+}
     .member-card img {
       width: 150px;
       height: auto;
@@ -117,8 +141,10 @@
       <h3>Principal Investigator</h3>
   <div class="members-grid">
     <div class="member-card">
+         <div class="member-left">
       <img src="member1.jpg" alt="Dr. Jun Woo Choi" style="width:150px; height:auto;">
        <h4>Dr. Jun Woo Choi</h4>
+             </div>
          <div class="member-info">
             <p><strong>Professional Experience</strong></p>
             <p>2024.09 – Present 	Professor, KU-KIST Graduate School, Korea University</p>
@@ -138,8 +164,10 @@
   <h3>Postdoctoral Researchers</h3>
   <div class="members-grid">
     <div class="member-card">
+          <div class="member-left">
       <img src="member2.jpg" alt="Dr. Hee Young Kwon" style="width:150px; height:auto;">
       <h4>Dr. Hee Young Kwon</h4>
+                </div>
      <div class="member-info">
        <p><strong>Professional Experience & Education</strong></p>
        <p>2019.09 - Present Postdoctoral Researcher, Center for Semiconductor Technology, KIST</p>
@@ -156,9 +184,12 @@
     </div>
   </div>
     
+      <div class="members-grid">
        <div class="member-card">
+             <div class="member-left">
         <img src="member3.jpg" alt="Dr. Howon Lee" style="width:150px; height:auto;">
         <h4>Dr. Howon Lee</h4>
+             </div>
           <div class="member-info">
         <p><strong>Professional Experience & Education</strong></p>
        <p>2023.02 – Present Postdoctoral Researcher, Center for Semiconductor Technology, KIST</p>
@@ -169,23 +200,33 @@
        </div>
     </div>
   </div>
-    
+
+      <div class="members-grid">
        <div class="member-card">
+             <div class="member-left">
         <img src="member4.jpg" alt="Dr. Min-Jae Kim" style="width:150px; height:auto;">
         <h4>Dr. Min-Jae Kim</h4>
+                   </div>
           <div class="member-info">
         <p><strong>Professional Experience & Education</strong></p>
+        <p>2024.09 - Postdoctoral Researcher, Center for Semiconductor Technology, KIST</p>
+        <p>2022.03 Postdoctoral Researcher, TU Dresden & Max-Planck Institute of Solid State Research </p>
+        <p>2022 Ph.D., Physics, University of Stuttgart & Max-Planck Institute of Solid State Research</p>
         <p><strong>Research Interests</strong></p>
-       <p>XXX</p>
+       <p>Ultrafast spectroscopy of quantum materials, focusing on superconductivity, excitonic insulators, and THz nonlinear optics</p>
+        <p>Development of ultrafast optoelectronic devices based on quantum materials</p>
       </div>
     </div>
   </div>
-    
+
+          <div class="members-grid">
        <div class="member-card">
+             <div class="member-left">
         <img src="member8.jpg" alt="Dr. Myeongjin Jang" style="width:150px; height:auto;">
         <h4>Dr. Myeongjin Jang</h4>
+                   </div>
           <div class="member-info">
-        <p><strong>Professional Experience & Education</strong></p>
+                  <p><strong>Professional Experience & Education</strong></p>
             <p>2025.02 – Present Postdoctoral Researcher, Center for Semiconductor Technology, KIST</p>
             <p>2025.02 Ph.D., Physics, Yonsei University (advisor: Kwanpyo Kim)</p>
             <p>2019.02 B.S., Physics, Yonsei University</p>
@@ -195,9 +236,12 @@
     </div>
   </div>
 
+      <div class="members-grid">
            <div class="member-card">
+                 <div class="member-left">
         <img src="member5.jpg" alt="Dr. Junghyun Kim" style="width:150px; height:auto;">
         <h4>Dr. Junghyun Kim</h4>
+                       </div>
               <div class="member-info">
         <p><strong>Professional Experience & Education</strong></p>
                 <p>2024.09 - Postdoctoral Researcher, Center for Semiconductor Technology, KIST</p>
@@ -213,8 +257,10 @@
       <h3>Graduate Students</h3>
   <div class="members-grid">
     <div class="member-card">
+          <div class="member-left">
       <img src="member6.jpg" alt="PARK CHAN HYUK" style="width:150px; height:auto;">
       <h4>PARK CHAN HYUK</h4>
+          </div>
         <div class="member-info">
       <p><strong>Professional Experience & Education</strong></p>
            <p>2023.04 ~ 2025.01 Intern Research, Center for Semiconductor, KIST</p>
@@ -229,8 +275,10 @@
      <h3>Intern</h3>
   <div class="members-grid">
     <div class="member-card">
+          <div class="member-left">
       <img src="member7.jpg" alt="Junpyo Jang" style="width:150px; height:auto;">
       <h4>Junpyo Jang</h4>
+                </div>
         <div class="member-info">
       <p><strong>Professional Experience & Education</strong></p>
            <p>2025.04 – Present Intern Researcher, Center for Semiconductor Technology, KIST</p>
