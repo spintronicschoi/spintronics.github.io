@@ -3,14 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Quantum-material-based Spintronics</title>
-  <link rel="shortcut icon" href="favicon.png">
-  <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap4.min.css">
+  <title>Gallery - Spintronics Group</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
   <style>
     body {
-      margin: 0;
       font-family: "Hind", sans-serif;
       background-color: #f9f9f9;
+      margin: 0;
       color: #030303;
     }
     .navbar {
@@ -33,36 +32,52 @@
     .navbar a:hover {
       text-decoration: underline;
     }
-    .header {
-      background-image: url("header-image.jpg");
-      background-size: cover;
-      background-position: center;
-      color: white;
-      padding: 100px 20px 40px;
-      text-align: center;
-    }
-    .header h1 {
-      font-size: 3em;
-      margin: 0 0 10px;
-    }
-    .header p {
-      font-size: 1.3em;
-    }
-    .section {
+
+    .gallery {
       max-width: 1100px;
       margin: 40px auto;
-      background: white;
-      padding: 30px;
-      border-radius: 8px;
-      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
     }
-    .section h2 {
-      border-left: 4px solid #a51c30;
-      padding-left: 12px;
+
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s;
+      background-color: #fff;
     }
-    .news ul {
-      padding-left: 20px;
+
+    .gallery-item img {
+      width: 100%;
+      display: block;
+      transition: transform 0.3s;
     }
+
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+
+    .gallery-caption {
+      position: absolute;
+      bottom: 0;
+      background: rgba(0,0,0,0.6);
+      color: white;
+      width: 100%;
+      padding: 10px;
+      text-align: center;
+      font-size: 0.95em;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .gallery-item:hover .gallery-caption {
+      opacity: 1;
+    }
+
     footer {
       background-color: #fff;
       text-align: center;
@@ -75,6 +90,7 @@
   </style>
 </head>
 <body>
+
   <nav class="navbar">
     <div class="logo"><strong>Quantum-material Spintronics Group @ KIST</strong></div>
     <div>
@@ -87,28 +103,36 @@
     </div>
   </nav>
 
-  <div class="header">
-    <h1>Quantum-material-based Spintronics</h1>
-    <p>Exploring 2D magnetism and spin transport</p>
-  </div>
+  <div class="gallery">
+    <a href="images/lab1.jpg" data-lightbox="lab-gallery" data-title="Lab View 1 - Main Lab">
+      <div class="gallery-item">
+        <img src="images/lab1_thumb.jpg" alt="Lab View 1">
+        <div class="gallery-caption">Main Lab – Instruments and Workbench</div>
+      </div>
+    </a>
 
- <div class="gallery">
-    <a href="images/lab1.jpg" data-lightbox="lab-gallery" data-title="Lab View 1">
-      <img src="images/lab1_thumb.jpg" alt="Lab View 1">
+    <a href="images/lab2.jpg" data-lightbox="lab-gallery" data-title="Lab View 2 - Sample Prep Area">
+      <div class="gallery-item">
+        <img src="images/lab2_thumb.jpg" alt="Lab View 2">
+        <div class="gallery-caption">Sample Preparation Area – Clean and Organized</div>
+      </div>
     </a>
-    <a href="images/lab2.jpg" data-lightbox="lab-gallery" data-title="Lab View 2">
-      <img src="images/lab2_thumb.jpg" alt="Lab View 2">
-    </a>
-    <a href="images/lab3.jpg" data-lightbox="lab-gallery" data-title="Lab View 3">
-      <img src="images/lab3_thumb.jpg" alt="Lab View 3">
-    </a>
-    <!-- 필요에 따라 이미지 추가 -->
-  </div>
 
+    <a href="images/lab3.jpg" data-lightbox="lab-gallery" data-title="Lab View 3 - Team Working">
+      <div class="gallery-item">
+        <img src="images/lab3_thumb.jpg" alt="Lab View 3">
+        <div class="gallery-caption">Team Collaboration – Discussion & Experiment</div>
+      </div>
+    </a>
+
+    <!-- 필요한 만큼 이미지 추가 -->
+  </div>
 
   <footer>
     &copy; 2025 Spintronics Group – junwoo@kist.re.kr<br>
     Hosted at KIST, Seoul, Republic of Korea
   </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js"></script>
 </body>
 </html>
